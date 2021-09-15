@@ -1,0 +1,337 @@
+@import "../../modules/defines.scss";
+
+.CONTENT {}
+
+.BODY {
+    align-items: center;
+
+    .punk_details {
+        width: 100%;
+        max-width: 1000px;
+        margin-top: 5vh;
+        margin-bottom: 100px;
+
+        >* {
+            margin-bottom: 70px;
+        }
+
+        .profile {
+            width: 100%;
+            flex-direction: row;
+
+            .profile_picture {
+                align-items: flex-start;
+                flex-basis: 50%;
+
+                .IC {
+                    width: 100%;
+                    height: 100%;
+                    image-rendering: crisp-edges;
+                    image-rendering: -moz-crisp-edges;
+                    justify-content: center;
+
+                    img {
+                        background-color: rgba($color: $c_primary, $alpha: 1);
+                        border-radius: 40px;
+                        overflow: hidden;
+                        image-rendering: pixelated;
+                        image-rendering: -moz-crisp-edges;
+                    }
+                }
+            }
+
+            .profile_info {
+                padding: 40px;
+                align-items: flex-start;
+                flex-basis: 50%;
+
+                .record {
+                    margin-bottom: 30px;
+
+                    .key {
+                        @include font-author_bold;
+                        opacity: 0.3;
+                        margin-bottom: 8px;
+                    }
+
+                    .value {
+                        font-size: 18px;
+                    }
+
+                    &.name {
+                        .value {
+                            @include font-author_bold;
+                            font-size: 60px;
+                        }
+                    }
+
+                    &.attrs {
+                        .value {
+                            flex-direction: row;
+                            flex-wrap: wrap;
+
+                            .attr {
+                                margin-right: 10px;
+                                margin-bottom: 10px;
+                                padding: 4px 14px;
+                                border-radius: 100px;
+                                border: 1px solid rgba($color: #000000, $alpha: 0.7);
+                            }
+                        }
+                    }
+
+                    &.owner {
+                        .value {
+                            font-size: 20px;
+
+                            a {
+                                &::before {
+                                    content: none;
+                                }
+                            }
+
+                            * {
+                                color: $c_primary;
+                            }
+                        }
+                    }
+
+                    &.price {
+                        .value {
+                            font-size: 40px;
+                            @include font-author_bold;
+
+                            * {
+                                color: $c_primary;
+                            }
+                        }
+                    }
+
+                    &.rank {
+                        margin-top: auto;
+
+                        .value {
+                            font-size: 40px;
+                            @include font-author_bold;
+                        }
+                    }
+                }
+            }
+        }
+
+        .actions {
+            width: 100%;
+            padding: 30px 40px;
+            background-color: $c_secondary;
+            box-shadow: 0 20px 60px -20px rgba($color: $c_secondary, $alpha: 0.7);
+            border: 1px solid transparent;
+            border-radius: 30px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            &.-mine {
+                background-color: #eee;
+                box-shadow: 0 20px 60px -20px rgba($color: #000000, $alpha: 0.2);
+                border-color: rgba($color: $c_primary, $alpha: 1)
+            }
+
+            .description {
+                @include font-author_bold;
+                text-transform: uppercase;
+            }
+
+            .Actions {
+                .Btn {
+                    margin-left: 10px;
+
+                    &.-simple {
+                        * {
+                            color: $c_primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .data {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto;
+
+            .table {
+                min-height: 170px;
+                padding: 10px;
+
+                >.title {
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-bottom: 16px;
+                    opacity: 0.8;
+                    font-size: 18px;
+
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+
+                >.c- {
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid rgba($color: #000000, $alpha: 0.1);
+                    border-radius: 20px;
+                    overflow: hidden;
+                    padding: 16px;
+
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        position: relative;
+
+                        thead {
+                            @include font-author_bold;
+                            position: sticky;
+                            z-index: 1000;
+                            background-color: #fff;
+                            top: 0;
+                            left: 0;
+
+                            th {
+                                text-align: left;
+                                padding: 8px 10px 14px 10px;
+                            }
+                        }
+
+                        tbody {
+                            .isEmpty {
+                                width: 100%;
+                                height: 100%;
+                                padding: 12px 6px;
+                                opacity: 0.5;
+                            }
+
+                            tr {
+
+                                border-radius: 12px;
+                                overflow: hidden;
+
+                                td:first-child {
+                                    border-top-left-radius: 8px;
+                                }
+
+                                td:last-child {
+                                    border-top-right-radius: 8px;
+                                }
+
+                                td:first-child {
+                                    border-bottom-left-radius: 8px;
+                                }
+
+                                td:last-child {
+                                    border-bottom-right-radius: 8px;
+                                }
+
+                                &:nth-of-type(odd) {
+                                    background-color: rgba($color: #000000, $alpha: 0.03);
+                                }
+
+                                td {
+                                    padding: 8px 10px;
+
+                                    a {
+                                        color: $c_primary;
+                                        opacity: 0.8;
+
+                                        &::before {
+                                            content: none;
+                                        }
+
+                                        &:hover {
+                                            opacity: 1;
+                                        }
+                                    }
+
+                                    .status {
+                                        &.-success {
+                                            color: #51cca1;
+                                        }
+
+                                        &.-error {
+                                            color: #ed7171;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                &.offer {}
+
+                &.history {
+                    margin-top: 16px;
+                    grid-column: span 2;
+                    min-height: 500px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width : 700px) {
+    .punk_details {
+        >* {
+            margin-bottom: 40px !important;
+        }
+
+        .profile {
+            flex-direction: column !important;
+
+            .profile_picture {}
+
+            .profile_info {
+                padding: 30px 10px !important;
+            }
+        }
+
+        .actions {
+            flex-direction: column !important;
+            padding: 26px !important;
+            text-align: center !important;
+            line-height: 20px !important;
+
+            .Actions {
+                margin-top: 16px;
+
+                .Btn {
+                    font-size: 14px !important;
+                }
+            }
+        }
+
+        .data {
+            .table {
+                grid-column: span 2 !important;
+
+                table {
+                    thead {
+                        th {
+                            min-width: 120px;
+                        }
+                    }
+                }
+
+                .CONTENT {
+                    .BODY {
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                    }
+                }
+            }
+        }
+    }
+}

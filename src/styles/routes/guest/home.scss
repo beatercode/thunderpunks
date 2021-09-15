@@ -1,0 +1,483 @@
+@import "../../modules/defines.scss";
+
+.CONTENT {}
+
+.BODY {
+    justify-content: center;
+    align-items: center;
+
+    .section {
+        position: relative;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin-bottom: 200px;
+
+        &.-full {
+            max-width: 100%;
+        }
+
+        // 
+        .hero {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 600px;
+            height: 85vh;
+            max-height: 1000px;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                box-shadow: inset 0px -180px 120px -30px rgba($color: #ffffff, $alpha: 1);
+                pointer-events: none;
+            }
+
+            >.ABS.cta_punks {
+                position: absolute;
+                flex-direction: row;
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    background-color: rgba($color: #ffffff, $alpha: 0.7);
+                    pointer-events: none;
+                    z-index: 30;
+                }
+
+                .Punkontainer {
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+
+                    .Punkard {
+                        opacity: 0;
+                        pointer-events: none;
+                        box-shadow: 0 20px 70px -20px rgba($color: #000000, $alpha: 0.3);
+
+                        &:hover {
+                            opacity: 1 !important;
+                            z-index: 31;
+                        }
+
+                        &.-active {
+                            opacity: 0.3;
+                            pointer-events: all;
+                        }
+                    }
+                }
+            }
+
+            >.body {
+                justify-content: center;
+                align-items: center;
+                pointer-events: none;
+                z-index: 2;
+
+                .brand {
+                    pointer-events: all;
+                    margin-bottom: 30px;
+                    align-items: center;
+
+                    .shape {
+                        width: 220px;
+                        margin-bottom: 30px;
+                        animation: hero_brand-logo 3s infinite;
+                        cursor: pointer;
+                        transition: all 1s;
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+
+                        &:active {
+                            transform: scale(0.95);
+                        }
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .type {
+                        width: 200px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                @keyframes hero_brand-logo {
+                    0% {
+                        filter: brightness(1);
+                    }
+
+                    25% {
+                        filter: brightness(1.2);
+                    }
+
+                    50% {
+                        filter: brightness(1);
+                    }
+
+                    75% {
+                        filter: brightness(1.2);
+                    }
+
+                    100% {
+                        filter: brightness(1);
+                    }
+                }
+
+                .remains {
+                    pointer-events: all;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 18px;
+                    margin-bottom: 30px;
+
+                    .body {
+                        flex-direction: row;
+                        justify-content: center;
+                        background-color: rgba($color: #000000, $alpha: 1);
+                        padding: 14px 30px;
+                        margin: 0 12px;
+                        border-radius: 100px;
+
+                        * {
+                            color: #fff;
+                        }
+
+                        .free {}
+
+                        .seprator {
+                            opacity: 0.5;
+                            margin: 0 10px;
+                        }
+
+                        .all {}
+                    }
+                }
+
+                .minter {
+                    .description {
+                        font-size: 24px;
+                        margin-bottom: 30px;
+                        opacity: 0.8;
+                        text-align: center;
+                        line-height: 30px;
+                    }
+
+                    .act {
+                        pointer-events: all;
+
+                    }
+                }
+            }
+        }
+
+        // 
+        .punks_hotview {
+            width: 100%;
+            height: auto;
+            background-color: $c_primary;
+            border-radius: 60px;
+            overflow: hidden;
+            padding: 30px 60px;
+
+            >.head {
+                flex-direction: row;
+                justify-content: space-between;
+
+                .tabs {
+                    flex-direction: row;
+
+                    .tab {
+                        color: #fff;
+                        opacity: 0.5;
+
+                        &:not(:last-child) {
+                            margin-right: 20px;
+                        }
+
+                        &.-active {
+                            opacity: 1;
+                        }
+
+                        * {
+                            color: #000000;
+                        }
+                    }
+                }
+
+                .more {}
+            }
+
+            >.body {
+                margin: 20px 0;
+            }
+
+        }
+
+        // 
+        .whywe {
+            max-width: 800px;
+
+            .question {
+                font-size: 24px;
+                margin-bottom: 14px;
+                background-color: #efd173;
+                border-radius: 26px;
+                padding: 26px;
+                align-self: flex-start;
+                color: #000000;
+
+                * {
+                    color: #000000;
+                }
+            }
+
+            .answers {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: auto;
+                grid-gap: 14px;
+
+                .answer {
+                    background-color: #f8f8f8;
+                    border-radius: 38px;
+                    padding: 20px 26px;
+
+                    &.-full_col {
+                        grid-column: span 1;
+                        grid-row: span 2;
+                    }
+
+                    &.-full_row {
+                        grid-column: span 2;
+                        grid-row: span 1;
+                    }
+
+                    &.-item1 {
+                        background-color: #efd173;
+                        animation: whyme_answer-item 3s infinite;
+                        animation-delay: 4s;
+                        color: #000000;
+
+                        * {
+                            color: #000000;
+                        }
+                    }
+
+                    &.-item2 {
+                        background-color: #efd173;
+                        animation: whyme_answer-item 3s infinite;
+                        animation-delay: 2s;
+                        color: #000000;
+
+                        * {
+                            color: #000000;
+                        }
+                    }
+
+                    &.-item3 {
+                        background-color: #efd173;
+                        animation: whyme_answer-item 3s infinite;
+                        animation-delay: 3s;
+                        color: #000000;
+
+                        * {
+                            color: #000000;
+                        }
+                    }
+
+                    @keyframes whyme_answer-item {
+                        0% {
+                            background-color: #efd173;
+                        }
+                        25% {
+                            background-color: #096b21;
+                        }
+                        50% {
+                            background-color: #3e860d;
+                        }
+                        75% {
+                            background-color: #2a8437;
+                        }
+                        100% {
+                            background-color: #efd173;
+                        }
+                    }
+
+                    .titlebox {
+                        flex-direction: row;
+                        align-items: center;
+                        margin-bottom: 10px;
+
+                        .icon {
+                            margin-right: 12px;
+                            justify-content: center;
+                            align-items: center;
+                            width: 35px;
+                            height: 35px;
+                            background-color: rgba($color: #000000, $alpha: 0.5);
+                            border-radius: 100px;
+
+                            img {}
+                        }
+
+                        .title {}
+                    }
+
+                    .body {
+                        font-size: 18px;
+                        @include font-author_light;
+
+                        * {
+                            line-height: 32px;
+                        }
+                    }
+                }
+            }
+        }
+
+        //
+        .cta_mint {
+            .background {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    position: absolute;
+                    width: 100%;
+                    height: 50%;
+                    top: 0;
+                    left: 0;
+                    z-index: 0;
+                    overflow: visible;
+
+                    path {
+                        fill: #fff4a8;
+                        filter: blur(40px);
+                    }
+                }
+            }
+
+            >.text {
+                z-index: 1;
+                max-width: 600px;
+                font-weight: 800;
+                text-align: center;
+                font-size: 50px;
+                @include font-author_bold;
+                text-transform: uppercase;
+                margin-bottom: 60px;
+                color: #f6d346;
+                background: -webkit-linear-gradient(#f6d346, #e3b602);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 0 20px 40px rgba($color: #fff, $alpha: 1);
+
+                * {
+                    color: #f6d346;
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width : 700px) {
+    .BODY {
+        .section {
+            margin-bottom: 100px;
+
+            .hero {
+                overflow: visible;
+                min-height: 750px !important;
+
+                .ABS.cta_punks {
+                    display: none !important;
+                }
+
+                .brand {
+                    margin-top: 20px;
+                }
+
+                .remains {
+                    flex-direction: column !important;
+
+                    .body {
+                        padding: 10px 26px !important;
+                        margin: 10px 0 !important;
+                    }
+                }
+
+                .minter {}
+            }
+
+            .punks_hotview {
+                padding: 12px;
+
+                .head {
+                    flex-direction: column;
+                    padding: 18px 10px;
+
+                    .tabs {
+                        margin-bottom: 20px;
+                        justify-content: center;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .whywe {
+                .question {
+                    width: 100%;
+                    text-align: center;
+                    align-self: center;
+                }
+
+                .answers {
+                    grid-template-columns: 100%;
+
+                    .answer {
+                        grid-column: span 1 !important;
+                        grid-row: span 1 !important;
+
+                        .body {
+                            * {
+                                font-size: 16px;
+                                line-height: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .cta_mint {
+                .text {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,158 @@
+@import "../../modules/defines.scss";
+
+.CONTENT {}
+
+.BODY {
+    justify-content: center;
+    align-items: center;
+
+    .explorer {
+        width: 100%;
+        max-width: 1200px;
+        margin-bottom: 60px;
+        justify-content: center;
+        align-items: center;
+
+        >.my_balance {
+            width: 100%;
+            max-width: 900px;
+            padding: 30px;
+            background-color: $c_secondary;
+            border-radius: 30px;
+            overflow: hidden;
+            margin-bottom: 60px;
+
+            .counter {
+                margin-bottom: 14px;
+
+                >* {
+                    flex-direction: row;
+                    margin-bottom: 6px;
+                    @include font-author_bold;
+                    text-transform: uppercase;
+
+                    p {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                    }
+
+                    .cash {
+                        font-size: 30px;
+                        margin: 0 12px;
+                        background-color: $c_primary;
+                        border-radius: 6px;
+                        padding: 4px 10px;
+                        color: #fff;
+                    }
+                }
+
+                .description {}
+
+                .punks {}
+
+                .currency {}
+            }
+
+            .actions {
+                width: 100%;
+                background-color: #000;
+                padding: 10px;
+                border-radius: 100px;
+
+                .Actions {
+                    justify-content: flex-end;
+                }
+            }
+        }
+
+        >.filtering {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            margin-bottom: 20px;
+
+            .searcher {
+                width: 100%;
+                max-width: 900px;
+
+            }
+
+            .extra {
+                margin-left: 30px;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                .fast_filter {
+                    margin-right: 16px;
+                    flex-direction: row;
+
+                    .CheckBox:not(:last-child) {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+
+
+        >.my_punks {
+            max-width: 900px;
+            width: 100%;
+
+            .Punkontainer {
+                width: 100%;
+                justify-content: flex-start !important;
+
+                .Punkard {
+                    height: auto;
+                    flex-basis: 31%;
+                    display: flex;
+                    flex-direction: column !important;
+                    border-radius: 30px !important;
+                    padding: 20px;
+
+                    .character {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 30px;
+                        aspect-ratio: 1;
+                        margin-bottom: 14px;
+                    }
+
+                    .info {
+                        .basic {
+                            .name {
+                                font-size: 30px;
+                            }
+
+                            .attrs {
+                                display: flex;
+                                justify-content: flex-start;
+                                justify-items: flex-start;
+                                align-items: flex-start;
+                                flex-wrap: wrap;
+
+                                .attr {
+                                    margin-bottom: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width : 700px) {
+    .explorer {
+        >.my_punks {
+            .Punkard {
+                flex-basis: 100% !important;
+            }
+        }
+    }
+}

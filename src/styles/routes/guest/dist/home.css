@@ -1,0 +1,462 @@
+@font-face {
+  font-family: "author-light";
+  src: url("../../assets/fonts/author/Author-Extralight.eot");
+  src: url("../../assets/fonts/author/Author-Extralight.eot") format("embedded-opentype"), url("../../assets/fonts/author/Author-Extralight.woff2") format("woff2"), url("../../assets/fonts/author/Author-Extralight.woff") format("woff"), url("../../assets/fonts/author/Author-Extralight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "author-regular";
+  src: url("../../assets/fonts/author/Author-Medium.eot");
+  src: url("../../assets/fonts/author/Author-Medium.eot") format("embedded-opentype"), url("../../assets/fonts/author/Author-Medium.woff2") format("woff2"), url("../../assets/fonts/author/Author-Medium.woff") format("woff"), url("../../assets/fonts/author/Author-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "author-bold";
+  src: url("../../assets/fonts/author/Author-Bold.eot");
+  src: url("../../assets/fonts/author/Author-Bold.eot") format("embedded-opentype"), url("../../assets/fonts/author/Author-Bold.woff2") format("woff2"), url("../../assets/fonts/author/Author-Bold.woff") format("woff"), url("../../assets/fonts/author/Author-Bold.ttf") format("truetype");
+}
+.BODY {
+  justify-content: center;
+  align-items: center;
+}
+.BODY .section {
+  position: relative;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 200px;
+}
+.BODY .section.-full {
+  max-width: 100%;
+}
+.BODY .section .hero {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 600px;
+  height: 85vh;
+  max-height: 1000px;
+  overflow: hidden;
+}
+.BODY .section .hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  box-shadow: inset 0px -180px 120px -30px white;
+  pointer-events: none;
+}
+.BODY .section .hero > .ABS.cta_punks {
+  position: absolute;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.BODY .section .hero > .ABS.cta_punks::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  z-index: 30;
+}
+.BODY .section .hero > .ABS.cta_punks .Punkontainer {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.BODY .section .hero > .ABS.cta_punks .Punkontainer .Punkard {
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 20px 70px -20px rgba(0, 0, 0, 0.3);
+}
+.BODY .section .hero > .ABS.cta_punks .Punkontainer .Punkard:hover {
+  z-index: 31;
+}
+.BODY .section .hero > .ABS.cta_punks .Punkontainer .Punkard.-active {
+  opacity: 1;
+  pointer-events: all;
+}
+.BODY .section .hero > .body {
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+}
+.BODY .section .hero > .body .brand {
+  pointer-events: all;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.BODY .section .hero > .body .brand .shape {
+  width: 220px;
+  margin-bottom: 30px;
+  animation: hero_brand-logo 3s infinite;
+  cursor: pointer;
+  transition: all 1s;
+}
+.BODY .section .hero > .body .brand .shape:hover {
+  transform: scale(1.05);
+}
+.BODY .section .hero > .body .brand .shape:active {
+  transform: scale(0.95);
+}
+.BODY .section .hero > .body .brand .shape img {
+  width: 100%;
+}
+.BODY .section .hero > .body .brand .type {
+  width: 200px;
+}
+.BODY .section .hero > .body .brand .type img {
+  width: 100%;
+}
+@keyframes hero_brand-logo {
+  0% {
+    filter: brightness(1);
+  }
+  25% {
+    filter: brightness(1.2);
+  }
+  50% {
+    filter: brightness(1);
+  }
+  75% {
+    filter: brightness(1.2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+.BODY .section .hero > .body .remains {
+  pointer-events: all;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.BODY .section .hero > .body .remains .body {
+  flex-direction: row;
+  justify-content: center;
+  background-color: black;
+  padding: 14px 30px;
+  margin: 0 12px;
+  border-radius: 100px;
+}
+.BODY .section .hero > .body .remains .body * {
+  color: #fff;
+}
+.BODY .section .hero > .body .remains .body .seprator {
+  opacity: 0.5;
+  margin: 0 10px;
+}
+.BODY .section .hero > .body .minter .description {
+  font-size: 24px;
+  margin-bottom: 30px;
+  opacity: 0.8;
+  text-align: center;
+  line-height: 30px;
+}
+.BODY .section .hero > .body .minter .act {
+  pointer-events: all;
+}
+.BODY .section .punks_hotview {
+  width: 100%;
+  height: auto;
+  background-color: #efd173;
+  border-radius: 60px;
+  overflow: hidden;
+  padding: 30px 60px;
+}
+.BODY .section .punks_hotview > .head {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.BODY .section .punks_hotview > .head .tabs {
+  flex-direction: row;
+}
+.BODY .section .punks_hotview > .head .tabs .tab {
+  color: #fff;
+  opacity: 0.5;
+}
+.BODY .section .punks_hotview > .head .tabs .tab:not(:last-child) {
+  margin-right: 20px;
+}
+.BODY .section .punks_hotview > .head .tabs .tab.-active {
+  opacity: 1;
+}
+.BODY .section .punks_hotview > .head .tabs .tab * {
+  color: #fff;
+}
+.BODY .section .punks_hotview > .body {
+  margin: 20px 0;
+}
+.BODY .section .whywe {
+  max-width: 800px;
+}
+.BODY .section .whywe .question {
+  font-size: 24px;
+  margin-bottom: 14px;
+  background-color: #efd173;
+  border-radius: 26px;
+  padding: 26px;
+  align-self: flex-start;
+  color: #fff;
+}
+.BODY .section .whywe .question * {
+  color: #fff;
+}
+.BODY .section .whywe .answers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  grid-gap: 14px;
+}
+.BODY .section .whywe .answers .answer {
+  background-color: #efd173;
+  border-radius: 38px;
+  padding: 20px 26px;
+}
+.BODY .section .whywe .answers .answer.-full_col {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.BODY .section .whywe .answers .answer.-full_row {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.BODY .section .whywe .answers .answer.-item1 {
+  background-color: #1653fc;
+  animation: whyme_answer-item 3s infinite;
+  animation-delay: 4s;
+  color: #fff;
+}
+.BODY .section .whywe .answers .answer.-item1 * {
+  color: #fff;
+}
+.BODY .section .whywe .answers .answer.-item2 {
+  background-color: #1653fc;
+  animation: whyme_answer-item 3s infinite;
+  animation-delay: 2s;
+  color: #fff;
+}
+.BODY .section .whywe .answers .answer.-item2 * {
+  color: #fff;
+}
+.BODY .section .whywe .answers .answer.-item3 {
+  background-color: #1653fc;
+  animation: whyme_answer-item 3s infinite;
+  animation-delay: 3s;
+  color: #fff;
+}
+.BODY .section .whywe .answers .answer.-item3 * {
+  color: #fff;
+}
+@keyframes whyme_answer-item {
+  0% {
+    background-color: #1653fc;
+  }
+  25% {
+    background-color: #4a00d6;
+  }
+  50% {
+    background-color: #902afc;
+  }
+  75% {
+    background-color: #4a00d6;
+  }
+  100% {
+    background-color: #1653fc;
+  }
+}
+.BODY .section .whywe .answers .answer .titlebox {
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.BODY .section .whywe .answers .answer .titlebox .IC {
+  margin-right: 12px;
+  width: 30px;
+  height: 30px;
+  background-color: #ddd;
+  border-radius: 100px;
+}
+.BODY .section .whywe .answers .answer .body {
+  font-size: 18px;
+  font-family: "author-light" !important;
+}
+.BODY .section .whywe .answers .answer .body * {
+  font-family: "author-light" !important;
+}
+.BODY .section .whywe .answers .answer .body * {
+  line-height: 32px;
+}
+.BODY .section .cta_mint .background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.BODY .section .cta_mint .background svg {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: visible;
+}
+.BODY .section .cta_mint .background svg path {
+  fill: #fff4a8;
+  filter: blur(40px);
+}
+.BODY .section .cta_mint > .text {
+  z-index: 1;
+  max-width: 600px;
+  font-weight: 800;
+  text-align: center;
+  font-size: 50px;
+  font-family: "author-black" !important;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  color: #f6d346;
+  background: -webkit-linear-gradient(#f6d346, #e3b602);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 20px 40px white;
+}
+.BODY .section .cta_mint > .text * {
+  font-family: "author-bold" !important;
+}
+.BODY .section .cta_mint > .text * {
+  color: #f6d346;
+}
+.BODY .footer {
+  width: 100%;
+  max-width: 1200px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 60px 30px;
+  margin: 0 0 60px 0;
+  justify-content: flex-start;
+}
+.BODY .footer > .basic {
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.BODY .footer > .basic .socials {
+  flex-direction: row;
+}
+.BODY .footer > .basic .socials .social {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.BODY .footer > .basic .socials .social:not(:last-child) {
+  margin-right: 20px;
+}
+.BODY .footer > .basic .socials .social .IC {
+  padding: 10px;
+}
+.BODY .footer > .basic .power {
+  flex-direction: row;
+  align-items: center;
+  padding: 6px 12px;
+}
+.BODY .footer > .basic .power .logo {
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+  margin-right: 10px;
+}
+.BODY .footer > .extra {
+  width: 100%;
+}
+.BODY .footer > .extra .links {
+  flex-direction: row;
+}
+.BODY .footer > .extra .links .link {
+  padding: 4px 10px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.BODY .footer > .extra .links .link:not(:last-child) {
+  margin-right: 8px;
+}
+.BODY .footer > .extra .links .link * {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 700px) {
+  .BODY .section {
+    margin-bottom: 100px;
+  }
+  .BODY .section .hero {
+    overflow: visible;
+    min-height: 750px !important;
+  }
+  .BODY .section .hero .ABS.cta_punks {
+    display: none !important;
+  }
+  .BODY .section .hero .brand {
+    margin-top: 20px;
+  }
+  .BODY .section .hero .remains {
+    flex-direction: column !important;
+  }
+  .BODY .section .hero .remains .body {
+    padding: 10px 26px !important;
+    margin: 10px 0 !important;
+  }
+  .BODY .section .punks_hotview {
+    padding: 12px;
+  }
+  .BODY .section .punks_hotview .head {
+    flex-direction: column;
+    padding: 18px 10px;
+  }
+  .BODY .section .punks_hotview .head .tabs {
+    margin-bottom: 20px;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .BODY .section .whywe .question {
+    width: 100%;
+    text-align: center;
+    align-self: center;
+  }
+  .BODY .section .whywe .answers {
+    grid-template-columns: 100%;
+  }
+  .BODY .section .whywe .answers .answer {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+  .BODY .section .whywe .answers .answer .body * {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .BODY .section .cta_mint .text {
+    font-size: 40px;
+  }
+  .BODY .footer .basic {
+    flex-direction: column;
+  }
+  .BODY .footer .basic .socials {
+    margin-bottom: 10px;
+  }
+  .BODY .footer .extra .links {
+    justify-content: center;
+  }
+  .BODY .footer .extra .links .link {
+    padding: 0;
+  }
+}
